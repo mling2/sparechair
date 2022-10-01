@@ -35,6 +35,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css"></link></head>
     <RouterProvider router={router} />
   </React.StrictMode>
 );
