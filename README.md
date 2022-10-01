@@ -1,1 +1,1 @@
-# sparechair
+# SpareChair :chair:
