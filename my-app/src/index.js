@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import RentTransaction from "./pages/RentTransaction";
+import SellerForm from './pages/SellerForm';
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -26,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/transaction",
     element: <RentTransaction />,
+  },
+  {
+    path: "/seller",
+    element: <SellerForm />,
   },
 ]);
 
