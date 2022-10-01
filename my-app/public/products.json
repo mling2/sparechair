@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "name": "Black Couch",
+            "imgFile": "../images/blackCouch.jpeg",
+            "condition": "GentlyUsed",
+            "price": 100
+        },
+        {
+            "name": "Green Couch",
+            "imgFile": "../images/greenCouch.jpeg",
+            "condition": "GentlyUsed",
+            "price": 100
+        },
+        {
+            "name": "Grey Couch",
+            "imgFile": "../images/greyCouch.jpg",
+            "condition": "LikeNew",
+            "price": 150
+        }
+    ]
+}
