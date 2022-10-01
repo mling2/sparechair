@@ -2,20 +2,24 @@ import Header from './Header.js';
 import Item from './Item.js';
 import greenCouch from '../images/greenCouch.jpeg';
 import greyCouch from '../images/greyCouch.jpg';
+import {Condition} from './Condition.ts';
 
 // function Price() {
 //     return ();
 // }
 
-// function Filters() {
-//     return ();
-// }
-
-function Browse() {
+function Browse(props) {
     return (
     <div>
-        <Item name="Green Couch" imgFile={greenCouch} />
-        <Item name="Grey Couch" imgFile={greyCouch} />
+        <Header />
+        <Item name="Green Couch" 
+            imgFile={greenCouch} 
+            condition={Condition.GentlyUsed}
+            price={100}/>
+        <Item name="Grey Couch" 
+            imgFile={greyCouch}
+            condition={Condition.LikeNew}
+            price={150} />
     </div>
     );
 };
