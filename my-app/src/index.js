@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import RentTransaction from "./pages/RentTransaction";
 import SellerForm from './pages/SellerForm';
+import Header from './pages/Header';
 
 import {
   createBrowserRouter,
@@ -36,6 +37,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css"></link></head>
+    <Header />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

@@ -7,6 +7,7 @@ function SellerForm() {
                 <span>Listing Name</span>
                 <input />
             </label>
+            <br />
             <label>
                 <span>Furniture Type</span>
                 <select>
@@ -16,6 +17,7 @@ function SellerForm() {
                     <option>Bed</option>
                 </select>
             </label>
+            <br />
             <label>
                 <span>Price</span>
                 <input />

@@ -14,7 +14,6 @@ import greyCouch from '../images/greyCouch.jpg';
 function Browse() {
     return (
     <div>
-        <Header />
         <Item name="Green Couch" imgFile={greenCouch} />
         <Item name="Grey Couch" imgFile={greyCouch} />
     </div>
