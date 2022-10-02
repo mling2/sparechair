@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import {Condition} from './Condition.ts';
-import { BrowserRouter as Router, Link } from "react-router-dom"
+
 
 class Home extends React.Component {
     constructor(props) {
@@ -36,10 +36,12 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
               <div style={{ display: 'flex', 
-              width: 700, 
-              padding: 30 }}>
+              width: "100%", 
+              padding: 30,
+              textAlign: "center", 
+              justifyContent: "center"}}>
+        
               <Dropdown>
                 <Dropdown.Toggle variant="success">
                   Sell
@@ -49,7 +51,7 @@ class Home extends React.Component {
                 <Dropdown.Toggle variant="success">
                   Buy
                 </Dropdown.Toggle>
-              </Dropdown>
+              </Dropdown >
               <Dropdown>
                 <Dropdown.Toggle variant="success">
                   Rent
@@ -90,9 +92,9 @@ class Home extends React.Component {
                 </button >
                 </Dropdown.Menu>
               </Dropdown>
+     
               
             </div>
-        </div>
         );
     }
 };
