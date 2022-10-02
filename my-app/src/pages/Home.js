@@ -54,6 +54,33 @@ class Home extends React.Component {
                 <Dropdown.Toggle variant="success">
                   Buy
                 </Dropdown.Toggle>
+                <Dropdown.Menu>
+                <form>
+                    <label>
+                        Zip Code:&nbsp;
+                        <input type="text" name="zip" onChange = {this.onChangeInput} />
+                    </label>
+                    <label>
+                        Min $:&nbsp;
+                        <input type="text" name="min" onChange = {this.onChangeInput} />
+                    </label>
+                    <label>
+                        Max $:&nbsp;
+                        <input type="text" name="max" onChange = {this.onChangeInput} />
+                    </label>
+                    <label>
+                        Condition:&nbsp;
+                        <select>
+                            {Object.keys(Condition).map(key => (
+                                <option key={key}>{Condition[key]}</option>
+                            ))}
+                        </select>
+                    </label>
+                </form>
+                <button onClick={this.onSubmitHandler} >
+                    Search
+                </button >
+                </Dropdown.Menu>
               </Dropdown >
               <Dropdown>
                 <Dropdown.Toggle variant="success">
