@@ -62,27 +62,27 @@ class Home extends React.Component {
                     </label>
                     <label>
                         Min $:&nbsp;
-                        <input type="text" name="zip" onChange = {this.onChangeInput} />
+                        <input type="text" name="min" onChange = {this.onChangeInput} />
                     </label>
                     <label>
                         Max $:&nbsp;
-                        <input type="text" name="zip" onChange = {this.onChangeInput} />
+                        <input type="text" name="max" onChange = {this.onChangeInput} />
                     </label>
                     <label>
                         Condition:&nbsp;
                         <select>
                             {Object.keys(Condition).map(key => (
-                                <option>{Condition[key]}</option>
+                                <option key={key}>{Condition[key]}</option>
                             ))}
                         </select>
                     </label>
                     <label>
                         Start Date:&nbsp;
-                        <input type="text" name="zip" onChange = {this.onChangeInput} />
+                        <input type="text" name="start" onChange = {this.onChangeInput} />
                     </label>
                     <label>
                         End Date:&nbsp;
-                        <input type="text" name="zip" onChange = {this.onChangeInput} />
+                        <input type="text" name="end" onChange = {this.onChangeInput} />
                     </label>
                 </form>
                 <button onClick={this.onSubmitHandler} >

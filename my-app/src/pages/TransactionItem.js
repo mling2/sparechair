@@ -4,9 +4,12 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useLocation } from 'react-router-dom';
 
-function KitchenSinkExample(props) {
+function KitchenSinkExample() {
     const [show, setShow] = useState(false);
+
+    const location = useLocation();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -14,18 +17,18 @@ function KitchenSinkExample(props) {
   return (
     
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={props.imgFile} />
+      <Card.Img variant="top" src={location.state.imgFile} />
       <Card.Body>
-        <Card.Title>{props.name}</Card.Title>
+        <Card.Title>{location.state.name}</Card.Title>
         <Card.Text>
           Couch that I bought in college. Used for 2 years.
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-        <ListGroup.Item>Location: {props.location}</ListGroup.Item>
-        <ListGroup.Item>Item Condition: {props.condition}</ListGroup.Item>
+        <ListGroup.Item>Location: {location.state.location}</ListGroup.Item>
+        <ListGroup.Item>Item Condition: {location.state.condition}</ListGroup.Item>
         <ListGroup.Item>Dimensions: 6 x 3 x 4 ft</ListGroup.Item>
-        <ListGroup.Item>Cost: $40</ListGroup.Item>
+        <ListGroup.Item>Cost: ${location.state.price}</ListGroup.Item>
       </ListGroup>
       <Card.Body>
         <Button variant="primary"  onClick={handleShow}>Confirm</Button>
@@ -34,7 +37,7 @@ function KitchenSinkExample(props) {
         <Modal.Header closeButton>
           <Modal.Title>Purchase confirmation</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Congrats on confirming your Green Couch rental! :D</Modal.Body>
+        <Modal.Body>Congrats on confirming your {location.state.name} rental! :D</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close

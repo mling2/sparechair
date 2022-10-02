@@ -1,27 +1,22 @@
-import Header from './Header.js';
 import Item from './Item.js';
-import greenCouch from '../images/greenCouch.jpeg';
-import greyCouch from '../images/greyCouch.jpg';
 import {Condition} from './Condition.ts';
+import productData from './products.js';
+import React from 'react';
+import Filters from './Filters.js';
 
-// function Price() {
-//     return ();
-// }
 
-function Browse(props) {
-    return (
-    <div>
-        <Header />
-        <Item name="Green Couch" 
-            imgFile={greenCouch} 
-            condition={Condition.GentlyUsed}
-            price={100}/>
-        <Item name="Grey Couch" 
-            imgFile={greyCouch}
-            condition={Condition.LikeNew}
-            price={150} />
-    </div>
-    );
+class Browse extends React.Component {
+    render() {
+        <Filters />
+        const items = productData.map((item) => 
+        <Item name={item.name} 
+              imgFile={item.imgFile}
+              condition={Condition[item.condition]}
+              price={item.price} />);
+        return (
+            <div>{items}</div>
+            );
+    }
 };
 
 
