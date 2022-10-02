@@ -1,5 +1,4 @@
 import {Form} from "react-router-dom";
-import { Condition } from "./Condition.ts";
 
 function SellerForm() {
     return (
@@ -10,22 +9,18 @@ function SellerForm() {
             </label>
             <br />
             <label>
-                <span>Price</span>
-                <input />
-            </label>
-            <br />
-            <label>
-                <span>Condition</span>
+                <span>Furniture Type</span>
                 <select>
-                    {Object.keys(Condition).map(key => (
-                        <option>{Condition[key]}</option>
-                    ))}
+                    <option>Chair</option>
+                    <option>Couch</option>
+                    <option>Table</option>
+                    <option>Bed</option>
                 </select>
             </label>
             <br />
             <label>
-                <span>Images</span>
-                <input type="file" multiple/>
+                <span>Price</span>
+                <input />
             </label>
         </Form>
     );
