@@ -44,6 +44,9 @@ class Home extends React.Component {
                 <Dropdown.Toggle variant="success">
                   Sell
                 </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    <button onClick={() => window.location.href = '/seller'}>Sell</button>
+                </Dropdown.Menu>
               </Dropdown>
               <Dropdown>
                 <Dropdown.Toggle variant="success">
