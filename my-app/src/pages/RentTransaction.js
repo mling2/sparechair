@@ -1,6 +1,5 @@
 import TransactionItem from './TransactionItem.js';
 import greenCouch from '../images/greenCouch.jpeg';
-import greyCouch from '../images/greyCouch.jpg';
 
 function RentTransaction() {
     return (
