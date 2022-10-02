@@ -20,9 +20,9 @@ function KitchenSinkExample() {
       <Card.Img variant="top" src={location.state.imgFile} />
       <Card.Body>
         <Card.Title>{location.state.name}</Card.Title>
-        <Card.Text>
+        {/* <Card.Text>
           Couch that I bought in college. Used for 2 years.
-        </Card.Text>
+        </Card.Text> */}
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Location: {location.state.location}</ListGroup.Item>

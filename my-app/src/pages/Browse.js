@@ -7,14 +7,9 @@ import Filters from './Filters.js';
 
 class Browse extends React.Component {
     render() {
-        <Filters />
-        const items = productData.map((item) => 
-        <Item name={item.name} 
-              imgFile={item.imgFile}
-              condition={Condition[item.condition]}
-              price={item.price} />);
         return (
-            <div>{items}</div>
+            <div>
+                <Filters products = {productData}/></div>
             );
     }
 };
