@@ -1,22 +1,22 @@
-{
-    "products": [
+const productData = [
         {
             "name": "Black Couch",
-            "imgFile": "../images/blackCouch.jpeg",
+            "imgFile": require("../images/blackCouch.jpeg"),
             "condition": "GentlyUsed",
             "price": 100
         },
         {
             "name": "Green Couch",
-            "imgFile": "../images/greenCouch.jpeg",
+            "imgFile": require("../images/greenCouch.jpeg"),
             "condition": "GentlyUsed",
             "price": 100
         },
         {
             "name": "Grey Couch",
-            "imgFile": "../images/greyCouch.jpg",
+            "imgFile": require("../images/greyCouch.jpg"),
             "condition": "LikeNew",
             "price": 150
         }
     ]
-}
+
+export default productData;
