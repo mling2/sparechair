@@ -1,10 +1,16 @@
 import './Header.css';
+import Button from 'react-bootstrap/Button';
 
 function Header() {
+    const onSubmitHandler = (e) => {
+        e.preventDefault();
+        window.location.href = '/';
+    }
+
     return (
-    <div className="Header">
+    <Button className="Header" onClick={onSubmitHandler}>
         <h1>SpareChair🪑</h1>
-        </div>);
+    </Button>);
 }
 
 export default Header;
