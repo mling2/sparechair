@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import {Condition} from './Condition.ts';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Link } from "react-router-dom"
 
 class Home extends React.Component {
     constructor(props) {
@@ -29,25 +29,9 @@ class Home extends React.Component {
         });
     }
 
-    onChangeHandler = (e) => {
-        return (
-            <Router>
-                <Link
-                    to={{
-                    pathname: "/browse",
-                    state: { 
-                        zip: this.state.zip,
-                        minPrice: this.sate.minPrice,
-                        maxPrice: this.state.maxPrice,
-                        condition: this.state.condition,
-                        startDate: this.state.startDate,
-                        endDate: this.state.endDate },
-                    }}
-                >
-                    Search
-                </Link>
-            </Router>
-        );
+    onSubmitHandler = (e) => {
+        e.preventDefault();
+        window.location.href = '/browse';
     }
 
     render() {
@@ -101,11 +85,12 @@ class Home extends React.Component {
                         <input type="text" name="zip" onChange = {this.onChangeInput} />
                     </label>
                 </form>
+                <button onClick={this.onSubmitHandler} >
+                    Search
+                </button >
                 </Dropdown.Menu>
               </Dropdown>
-              <button >
-                Search
-              </button>
+              
             </div>
         </div>
         );
