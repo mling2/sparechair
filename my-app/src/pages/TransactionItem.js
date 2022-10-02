@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { useLocation } from 'react-router-dom';
 
-function KitchenSinkExample() {
+function TransactionItem() {
     const [show, setShow] = useState(false);
 
     const location = useLocation();
@@ -50,4 +50,4 @@ function KitchenSinkExample() {
   );
 }
 
-export default KitchenSinkExample;
+export default TransactionItem;
