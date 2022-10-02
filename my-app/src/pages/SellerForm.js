@@ -54,7 +54,7 @@ function SellerForm() {
                      
                         <span>Images</span>
                         <input type="file" onChange={handleChange} />
-                        <img src={file} />
+                        <img src={file} alt=""/>
                  
                 </Col>
             </Row>
